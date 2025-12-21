@@ -49,17 +49,20 @@ class FoodDetailScreen extends StatelessWidget {
                         color: colorFromHex("#F2F2F2"),
                       ),
                     ),
-                    IgnorePointer(
-                      child: Container(
-                        height: 192,
-                        width: 192,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(Get.width),
-                          color: colorFromHex("#fff9f1"),
-                        ),
-                      ),
-                    )
-,
+            Positioned(
+              left: 180,
+              child: IgnorePointer(
+                child: Container(
+                  height: 192,
+                  width: 192,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle, // better than borderRadius here
+                    color: colorFromHex("#FFF9F1"),
+                  ),
+                ),
+              ),
+            ),
+
                     // Positioned image on the right
                     Positioned(
                       top:Get.height*0.1
