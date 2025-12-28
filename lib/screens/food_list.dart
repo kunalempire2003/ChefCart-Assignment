@@ -235,20 +235,27 @@ class FoodListScreen extends StatelessWidget {
                     return Container(
                       width: 59,
                       margin: const EdgeInsets.only(right: 8),
-                     child:    CircleAvatar(
-                          radius: 29,
-                          backgroundImage: CachedNetworkImageProvider(item.image),
-                          child: CircleAvatar(
-                            radius: 28.5,
-                            backgroundColor: Colors.black.withOpacity(0.4),
-                            child: Text(
-                              item.name,
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(color: Colors.white, fontSize: 8),
+                     child:    Container(
+                       padding:const EdgeInsets.all(2) ,
+                       decoration: BoxDecoration(
+                        border: Border.all(color: colorFromHex("#FF941A")),
+                         borderRadius: BorderRadius.circular(30)
+                       ),
+                       child: CircleAvatar(
+                            radius: 29,
+                            backgroundImage: CachedNetworkImageProvider(item.image),
+                            child: CircleAvatar(
+                              radius: 28.5,
+                              backgroundColor: Colors.black.withOpacity(0.4),
+                              child: Text(
+                                item.name,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(color: Colors.white, fontSize: 8),
+                              ),
                             ),
                           ),
-                        )
+                     )
                     );
                   },
                 ),
